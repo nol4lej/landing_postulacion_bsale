@@ -64,7 +64,6 @@ button{
 
 /* HEADER */
 .header{
-    border: 1px solid green;
     position: relative;
     padding-top: 5.5em;
 }
@@ -111,7 +110,6 @@ button{
 }
 
 .slider_content{
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,6 +120,7 @@ button{
     transform: translate(-50%, -50%);
     z-index: 6;
     color: #fff;
+    text-align: center;
 }
 
 .content_text span{
@@ -231,9 +230,11 @@ button{
 /* END DESCUBRE */
 /* ABOUT */
 .emprende{
-    background-image: url("../img/about4.jpg");
+    background-image: url("../img/about4-1.png");
     background-size: cover;
     padding: 2em;
+    color: #fff;
+    text-align: center;
 }
 
 .emprende_content{
@@ -241,6 +242,10 @@ button{
     flex-direction: column;
     align-items: center;
     gap: 1em;
+}
+
+.emprende_content span{
+    font-size: 60px;
 }
 
 .emprende button{
@@ -258,10 +263,6 @@ button{
 }
 /* EMPRENDE */
 /* ABOUT */
-.about{
-    /* padding: 2em; */
-}
-
 .about_tittle{
     padding: 5em;
     text-align: center;
@@ -313,7 +314,32 @@ button{
     background-color: rgb(28, 28, 28);
     border: 2px solid rgb(141, 141, 141);
 }
-
 /* ABOUT */
+/* CONTACT */
+
+.contact{
+    display: grid;
+    gap: 3em;
+    padding: 2em;
+}
+
+.contact_tittle{
+    text-align: center;
+}
+
+.contact_form_container form{
+    display: grid;
+}
+
+
+
+.contact_form_container form input, textarea{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+/* END CONTACT */
 
 /* END MAIN */
