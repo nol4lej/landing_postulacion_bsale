@@ -1,7 +1,7 @@
 let slicks_rounded = document.querySelectorAll(".slick_rounded");
 let slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
-const slideInterval = setInterval(nextSlide, 5000);
+let slideInterval = setInterval(nextSlide, 5000);
 
 function nextSlide() {
   slides[currentSlide].classList.remove("active");
@@ -21,7 +21,10 @@ function selectSlick(target){
   slicks_rounded[target].classList.add("active");
   slides[target].classList.add("active");
   currentSlide = parseInt(target); // actualizamos al target actual 
-  console.log(target)
+
+  // reinciamos el intervalo de tiempo para evitar que al cambiar el slider, este cambie rapidamente por el tiempo de intervalo que ya venia del slider anterior.
+  clearInterval(slideInterval); 
+  slideInterval = setInterval(nextSlide, 5000);
 }
 
 slicks_rounded.onclick = selectSlick;
