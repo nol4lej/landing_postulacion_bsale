@@ -72,7 +72,7 @@ button{
 .slider{
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 85vh;
 }
 
 .slide{
@@ -86,6 +86,18 @@ button{
     transition: opacity 1s ease-in-out;
 }
 
+/* capa sobre slide que da efecto de oscurecer */
+.slide::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 2));
+    pointer-events: none;
+  }
+
 .slide.active{
     display: block;
     opacity: 1;
@@ -95,7 +107,7 @@ button{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(.4);
+    filter: brightness(0.5);
 }
 
 .slider_content{
@@ -105,7 +117,7 @@ button{
     align-items: center;
     gap: 2em;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 6;
@@ -135,10 +147,39 @@ button{
     border: 2px solid rgb(141, 141, 141);
 }
 
+.options_container{
+    position: absolute;
+    z-index: 6;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1em;
+}
+
+.options_container button{
+    background: none;
+    display: grid;
+    color: #fff;
+}
+
+.options_container button > span {
+    background-color: rgb(28, 28, 28);
+    border-radius: 50px;
+    font-size: 70px;
+    padding: 10px;
+    transition: background 0.5s ease-in-out;
+}
+
+.options_container button > span:hover{
+    background-color: rgb(102, 102, 102);
+}
+
+
 .slick_slider_container{
     position: absolute;
     z-index: 6;
-    bottom: 0;
+    bottom: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -156,3 +197,123 @@ button{
 .slick_rounded.active{
     background-color: #fff;
 }
+/* END HEADER */
+
+/* MAIN */
+/* DESCUBRE */
+.descubre{
+    position: relative;
+    z-index: 6;
+    margin-top: -4em;
+}
+
+.descubre_card{
+    margin: 1.5em;
+    color: #fff;
+    background-color: black;
+}
+
+.card_img_container{
+    width: 100%;
+    height: 200px;
+}
+
+.card_img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_content{
+    padding: 1em;
+}
+
+/* END DESCUBRE */
+/* ABOUT */
+.emprende{
+    background-image: url("../img/about4.jpg");
+    background-size: cover;
+    padding: 2em;
+}
+
+.emprende_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.emprende button{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: max-content;
+    padding: 0.5em;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+
+.emprende button:hover{
+    background-color: rgb(28, 28, 28);
+    border: 2px solid rgb(141, 141, 141);
+}
+/* EMPRENDE */
+/* ABOUT */
+.about{
+    /* padding: 2em; */
+}
+
+.about_tittle{
+    padding: 5em;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about_content{
+    padding: 2em;
+    color: #fff;
+    background-color: black;
+}
+
+.about_card{
+    text-align: center;
+    position: relative;
+    z-index: 6;
+    margin-top: -6em;
+    display: grid;
+    gap: 15px;
+}
+
+.about_card_icon{
+    text-align: center;
+}
+
+.about_card_icon span{
+    padding: 0.5em;
+    background-color: rgb(141, 141, 141);
+    border-radius: 50%;
+    font-size: 70px;
+}
+
+.about_card_content{
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.about_card_content a{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: max-content;
+    padding: 0.5em;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+
+.about_card_content a:hover{
+    background-color: rgb(28, 28, 28);
+    border: 2px solid rgb(141, 141, 141);
+}
+
+/* ABOUT */
+
+/* END MAIN */
