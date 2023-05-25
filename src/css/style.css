@@ -422,7 +422,7 @@ button{
 
 .about_card_icon span{
     padding: 0.5em;
-    background-color: var(--bg-color-terciario);
+    background-color: var(--bg-color-primario);
     border-radius: 50%;
     font-size: 70px;
     transition: color 0.3s ease-in-out;
