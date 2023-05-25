@@ -9,6 +9,11 @@
     <title>GrowthConnect - Comunidad de Emprendedores</title>
 </head>
 <body>
+
+    <div class="loading">
+		<div class="loader"></div>
+	</div>
+
     <nav class="nav">
         <div class="nav_cont">
             <div class="nav_cont_logo">
@@ -26,6 +31,7 @@
             </ul>
             <div class="login_container">
                 <button><i class="material-icons">login</i> Iniciar sesión</button>
+                <button><i class="material-icons">person_add</i>Registrar</button>
             </div>
         </div>
     </nav>
@@ -221,6 +227,12 @@
         </div>
     </footer>
 </body>
+
+<script>
+    window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+});
+</script>
 
 <script src="./src/js/nav.js"></script>
 <script src="./src/js/slider.js"></script>
