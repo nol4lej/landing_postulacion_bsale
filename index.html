@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Document</title>
+    <title>GrowthConnect - Comunidad de Emprendedores</title>
 </head>
 <body>
     <nav class="nav">
         <div class="nav_cont">
             <div class="nav_cont_logo">
-                LOGO
+                <h1>GrowthConnect</h1>
             </div>
             <div class="nav_hamburger_button" id="nav_hamburger_button">
                 <svg fill="#fff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M280.214,39.211H16.786C7.531,39.211,0,46.742,0,55.997v24.335c0,9.256,7.531,16.787,16.786,16.787h263.428 c9.255,0,16.786-7.531,16.786-16.787V55.997C297,46.742,289.469,39.211,280.214,39.211z"></path> <path d="M280.214,119.546H16.786C7.531,119.546,0,127.077,0,136.332v24.336c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.336C297,127.077,289.469,119.546,280.214,119.546z"></path> <path d="M280.214,199.881H16.786C7.531,199.881,0,207.411,0,216.668v24.335c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.335C297,207.411,289.469,199.881,280.214,199.881z"></path> </g> </g> </g> </g></svg>
@@ -20,13 +20,16 @@
         </div>
         <div class="nav_cont_menu" id="nav_cont_menu">
             <ul class="nav_lista">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Contacto</a></li>
+                <li class="nav_lista_item"><a href="#header">Inicio</a></li>
+                <li class="nav_lista_item"><a href="#emprende">Nosotros</a></li>
+                <li class="nav_lista_item"><a href="#contact">Contacto</a></li>
             </ul>
+            <div class="login_container">
+                <button><i class="material-icons">login</i> Iniciar sesión</button>
+            </div>
         </div>
     </nav>
-    <header class="header">
+    <header class="header" id="header">
         <div class="arrow_back_container">
             <button id="arrow_back"><i class="material-icons">arrow_back_ios</i></button>
         </div>
@@ -39,7 +42,7 @@
                 <div class="slider_content">
                     <div class="content_text">
                         <span>Comunidad de Emprendedores</span>
-                        <p>Únete hoy y conoce los beneficios que tenemos para ti y tu emprendimiento.</p>
+                        <p>Emprendedores en línea buscando planificación empresarial y oportunidades de inversión.</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +50,8 @@
                 <img src="./src/img/slider2.jpeg" alt="">
                 <div class="slider_content">
                     <div class="content_text">
-                        <span>Conoce nuestros beneficios</span>
-                        <p>Contamos con las mejores estrategias y partners asociados para potenciar tu emprendimiento.</p>
+                        <span>Finanzas para emprendedores</span>
+                        <p>Apoyamos y asesoramos tu Startup buscando el éxito empresarial.</p>
                     </div>
                 </div>
             </div>
@@ -56,17 +59,18 @@
                 <img src="./src/img/slider3.webp" alt="">
                 <div class="slider_content">
                     <div class="content_text">
-                        <span>Comunidad de Emprendedores</span>
-                        <p>únete hoy y conoce los beneficios que tenemos para ti y tu emprendimiento.</p>
+                        <span>Gestión de proyectos</span>
+                        <p>Marketing digital, ventas y negociación. Creamos Networking.</p>
                     </div>
                 </div>
             </div>
             <div class="button_container">
-                <button>Regístrate aquí</button>
+                <button>Emprende aquí</button>
             </div>
             <div class="options_container">
-                <button><span class="material-icons">view_kanban</span>Dashboard</button>
+                <button><span class="material-icons">rocket_launch</span>Beneficios</button>
                 <button><span class="material-icons">diversity_3</span>Comunidad</button>
+                <button><span class="material-icons">analytics</span>Analíticas</button>
             </div>
             <div class="slick_slider_container">
                 <button class="slick_rounded active" onclick="selectSlick('0')"></button>
@@ -79,11 +83,11 @@
         <section class="descubre">
             <div class="descubre_card">
                 <div class="card_img_container">
-                    <img src="./src/img/about1.jpg" alt="">
+                    <img src="./src/img/evento.webp" alt="">
                 </div>
                 <div class="card_content">
-                    <p>Descubre a quienes Emprenden con nosotros</p>
-                    <a href="">Ver más</a>
+                    <p>Descubre el evento empresarial líder en Innovación, Transformación Digital & Open Source.</p>
+                    <a href="https://www.southsummit.co/madrid/" target="_blank">Ver más</a>
                 </div>
             </div>
             <div class="descubre_card">
@@ -91,7 +95,7 @@
                     <img src="./src/img/about2.jpg" alt="">
                 </div>
                 <div class="card_content">
-                    <p>Descubre a quienes Emprenden con nosotros</p>
+                    <p>Conoce a los líderes empresariales que impulsan las Startups en GrowthConnect.</p>
                     <a href="">Ver más</a>
                 </div>
             </div>
@@ -100,22 +104,22 @@
                     <img src="./src/img/about3.jpg" alt="">
                 </div>
                 <div class="card_content">
-                    <p>Descubre a quienes Emprenden con nosotros</p>
+                    <p>Descubre el evento empresarial líder en Innovación, Transformación Digital & Open Source.</p>
                     <a href="">Ver más</a>
                 </div>
             </div>
         </section>
-        <section class="emprende">
+        <section class="emprende" id="emprende">
             <div class="emprende_content">
                 <span class="material-icons">groups</span>
                 <h1>Emprende con Nosotros</h1>
-                <p>Conoce todos los beneficios que te entregan nuestras empresas asociadas</p>
+                <p>Únete a nuestra comunidad de emprendedores y descubre nuevas oportunidades de éxito.</p>
                 <a href="">Leer más</a>
             </div>
         </section>
         <section class="about">
             <div class="about_tittle">
-                <h1>Conoce más de nosotros</h1>
+                <h1>Conoce más sobre <span>GrowthConnect</span></h1>
             </div>
             <div class="arrow_back_about">
                 <button id="arrow_back_about"><i class="material-icons" id="back">arrow_back</i></button>
@@ -126,25 +130,34 @@
             <div class="about_content">
                 <div class="about_card active">
                     <div class="about_card_icon">
-                        <span class="material-icons">book</span>
+                        <span class="material-icons">query_stats</span>
                     </div>
                     <div class="about_card_content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum pariatur architecto tenetur quisquam, incidunt dolores illo ipsa ducimus, officiis nam fuga sint hic voluptatibus labore placeat a itaque sapiente sequi.</p>
+                        <p>En nuestra vibrante comunidad de emprendedores, descubre el poder del análisis de datos para impulsar tu negocio hacia el éxito.</p>
                         <a href="">Leer más</a>
                     </div>
                 </div>
                 <div class="about_card">
                     <div class="about_card_icon">
-                        <span class="material-icons">book</span>
+                        <span class="material-icons">account_tree</span>
                     </div>
                     <div class="about_card_content">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem ut nemo a vero error quidem. Illo, esse unde! Repellendus eveniet unde doloremque id, ipsam voluptates exercitationem aut! Quis, fugit molestias.</p>
+                        <p>Conéctate con profesionales de diversos sectores en nuestra comunidad, potenciando tu networking y generando oportunidades de crecimiento.</p>
+                        <a href="">Leer más</a>
+                    </div>
+                </div>
+                <div class="about_card">
+                    <div class="about_card_icon">
+                        <span class="material-icons">diversity_3</span>
+                    </div>
+                    <div class="about_card_content">
+                        <p>Nuestras asesorías personalizadas brindan soluciones estratégicas a emprendedores, impulsando su desarrollo y optimizando sus resultados empresariales.</p>
                         <a href="">Leer más</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact_tittle">
                 <h1>Contáctanos</h1>
             </div>
@@ -173,14 +186,14 @@
                 <div class="contact_form_container">
                     <h1>Formulario de Contacto</h1>
                     <form action="" method="post">
-                        <label for="">Nombre completo:</label>
-                        <input type="text" required>
+                        <label for="textName">Nombre completo:</label>
+                        <input type="text" id="textName" name="textName" required>
     
-                        <label for="">Email:</label>
-                        <input type="email" name="" id="" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
     
-                        <label for="">Teléfono:</label>
-                        <input type="tel" name="" id="" required>
+                        <label for="tel">Teléfono:</label>
+                        <input type="tel" name="tel" id="tel" required>
     
                         <label for="">Mensaje:</label>
                         <textarea name="" id="" cols="30" rows="10" required></textarea>
@@ -193,12 +206,24 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="logo_footer">
+            <h1>GrowthConnect</h1>
+            <p>Creado por Nolasco Medina</p>
+        </div>
+        <div class="links_footer">
+            <ul class=footer_list>
+                <li class="footer_list_item"><a href=""><i class="material-icons">library_books</i>Políticas & Privacidad</a></li>
+                <li class="footer_list_item"><a href=""><i class="material-icons">badge</i>Trabaja con nosotros</a></li>
+                <li class="footer_list_item"><a href=""><i class="material-icons">contact_support</i>Contacto</a></li>
 
+            </ul>
+        </div>
     </footer>
 </body>
 
 <script src="./src/js/nav.js"></script>
-<script src="./src//js/slider.js"></script>
+<script src="./src/js/slider.js"></script>
+<script src="./src/js/form.js"></script>
 
 </html>

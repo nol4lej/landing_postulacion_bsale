@@ -7,6 +7,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root{
     --color-primario: #795400;
     --color-secundario: #ca8e00;
@@ -32,10 +36,11 @@ button{
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 10;
+    z-index: 50;
     width: 100%;
     height: max-content;
     padding: 2em;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1);
 }
 
 .nav_cont{
@@ -44,12 +49,19 @@ button{
     align-items: center;
 }
 
+.nav_cont_logo{
+    color: var(--color-secundario);
+}
+
 .nav_hamburger_button > svg{
     width: 24px;
     height: 24px;
 }
 
 .nav_cont_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     overflow: hidden;
     width: 100%;
     opacity: 0;
@@ -69,6 +81,27 @@ button{
     gap: 1em;
     list-style: none;
 }
+
+.nav_lista_item{
+    border: 1px transparent;
+    position: relative;
+    width: max-content;
+}
+
+.nav_lista_item:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secundario);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav_lista_item:hover:before {
+    width: 100%;
+}
+
 /* END NAV */
 
 /* HEADER */
@@ -183,22 +216,26 @@ button{
 
 .options_container button{
     background: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #fff;
     font-weight: 700;
+    
 }
 
 .options_container button > span {
     border: 1px solid var(--color-secundario);
     background-color: var(--bg-color-primario);
     border-radius: 50px;
-    font-size: 70px;
+    font-size: 40px;
     padding: 10px;
     transition: background 0.5s ease-in-out;
     margin-bottom: 5px;
+    width: max-content;
 }
 
-.options_container button > span:hover{
+.options_container button:hover span{
     background-color: var(--color-primario);
 }
 
@@ -231,6 +268,8 @@ button{
     position: relative;
     z-index: 6;
     margin-top: -4em;
+    display: flex;
+    flex-direction: column;
 }
 
 .descubre_card{
@@ -261,6 +300,7 @@ button{
     gap: 1em;
     padding: 1em;
 }
+
 
 .card_content a{
     width: max-content;
@@ -299,6 +339,14 @@ button{
     font-size: 60px;
 }
 
+.emprende_content h1{
+    font-size: 30px;
+}
+
+.emprende_content p{
+    font-weight: 700;
+}
+
 .emprende a{
     border: 2px solid #fff;
     border-radius: 10px;
@@ -315,9 +363,14 @@ button{
 /* EMPRENDE */
 /* ABOUT */
 .about_tittle{
-    padding: 5em;
+    padding: 5em 0;
     text-align: center;
     background-color: #fff;
+    font-size: 23px;
+}
+
+.about_tittle span{
+    color: var(--color-primario);
 }
 
 .about_content{
@@ -329,14 +382,13 @@ button{
 .about_card{
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 5;
     margin-top: -6em;
-    margin-left: 7em;
-    margin-right: 7em;
     display: none;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    height: max-content;
 }
 
 .about_card.active{
@@ -352,13 +404,22 @@ button{
     background-color: var(--bg-color-terciario);
     border-radius: 50%;
     font-size: 70px;
-    
+    transition: color 0.3s ease-in-out;
+}
+
+.about_card_icon:hover span{
+    color: var(--color-secundario);
 }
 
 .about_card_content{
     display: grid;
     gap: 10px;
     justify-items: center;
+}
+
+.about_card_content p{
+    max-height: 100%;
+    overflow: auto;
 }
 
 .about_card_content a{
@@ -483,6 +544,7 @@ button{
 
 .contact_form_container form{
     display: grid;
+    font-weight: 700;
 }
 
 .contact_form_container form input, textarea{
@@ -506,12 +568,12 @@ button{
 }
 
 .form_buttons button{
-    background-color: var(--color-primario);
+    background-color: none;
     border: 2px solid #fff;
     border-radius: 10px;
     width: max-content;
     padding: 1em;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.5s ease-in-out;
 }
 
@@ -520,6 +582,50 @@ button{
 }
 /* END CONTACT */
 /* END MAIN */
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--bg-color-primario);
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    gap: 1em;
+    color: #fff;
+}
+
+.logo_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_footer h1{
+    color: var(--color-secundario);
+}
+
+.footer_list{
+    display: grid;
+    gap: 1em;
+}
+
+.footer_list_item{
+    list-style: none;
+}
+
+.footer_list_item a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer_list_item:hover a{
+    color: var(--color-secundario);
+}
+
+/* END FOOTER */
 
 @media screen and (min-width: 768px) {
 
@@ -540,12 +646,38 @@ button{
     }
 
     .nav_cont_menu{
-        display: flex;
+        flex-direction: row;
+        align-items: center;
         opacity: 1;
         height: 100%;
         justify-content: start;
         width: 50%;
     }
+
+    .login_container{
+        
+    }
+
+    .login_container button{
+        background-color: var(--color-primario);
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 1em;
+        color: #fff;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .login_container:hover button{
+        background-color: var(--color-secundario);
+
+    }
+
+    .login_container button{
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+    }
+
 
     .nav_lista{
         flex-direction: row;
@@ -610,15 +742,18 @@ button{
     /* DESCUBRE */
     .descubre{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 1em;
         margin-bottom: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 5em;
+        margin-right: 5em;
     }
 
     .descubre_card{
         margin: 0;
+        flex: 1;
+        flex-basis: 33.33%;
     }
     /* END DESCUBRE */
 
@@ -630,13 +765,14 @@ button{
 
     .about_card{
         display: flex;
-        /* width: 200px; */
-        border: 1px solid red;
+        margin-left: 7em;
+        margin-right: 7em;
     }
 
     .arrow_back_about, .arrow_forward_about{
         display: none;
     }
+
 
     /* END ABOUT */
 
@@ -655,6 +791,15 @@ button{
         order: 1;
     }
     /* END CONTACT */
+
+    /* FOOTER */
+        .footer{
+            flex-direction: row;
+            justify-content: center;
+            gap: 5em;
+        }
+    /* END FOOTER */
+
 }
 
 @media screen and (min-width: 1024px) {

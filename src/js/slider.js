@@ -65,7 +65,7 @@ function reinicioIntervalo(){
 
 arrow_forward_about.addEventListener("click", () => {
   slides_about[currentAbout].classList.remove("active")
-  if(currentAbout === 1){
+  if(currentAbout === 2){
     currentAbout = 0;
     slides_about[currentAbout].classList.add("active", )
   } else {
@@ -77,7 +77,7 @@ arrow_forward_about.addEventListener("click", () => {
 arrow_back_about.addEventListener("click", () => {
   slides_about[currentAbout].classList.remove("active")
   if(currentAbout === 0){
-    currentAbout = 1;
+    currentAbout = 2;
     slides_about[currentAbout].classList.add("active")
   } else {
     currentAbout = currentAbout - 1;
