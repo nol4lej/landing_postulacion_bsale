@@ -54,7 +54,7 @@ button{
     width: 100%;
     opacity: 0;
     height: 0;
-    transition: height 0.3s ease, opacity 0.3s ease;
+    /* transition: height 0.3s ease, opacity 0.3s ease;  */ /*CONTROLADO CON JS */
 }
 
 .nav_cont_menu.active {
@@ -63,7 +63,8 @@ button{
 }
 
 .nav_lista{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding-top: 1em;
     gap: 1em;
     list-style: none;
@@ -149,7 +150,7 @@ button{
 }
 
 .button_container button{
-    padding: 0.5em;
+    padding: 1em;
     background: none;
     color: #fff;
     font-weight: 700;
@@ -176,14 +177,17 @@ button{
     background: none;
     display: grid;
     color: #fff;
+    font-weight: 700;
 }
 
 .options_container button > span {
+    border: 1px solid var(--color-secundario);
     background-color: var(--bg-color-primario);
     border-radius: 50px;
     font-size: 70px;
     padding: 10px;
     transition: background 0.5s ease-in-out;
+    margin-bottom: 5px;
 }
 
 .options_container button > span:hover{
@@ -389,11 +393,16 @@ button{
     gap: 1em;
 }
 
+.contact_item:hover i{
+    background-color: var(--color-primario);
+}
+
 .contact_item i{
     background-color: var(--bg-color-terciario);
     padding: 0.4em;
     font-size: 40px;
     border-radius: 50%;
+    transition: background 0.3s ease-in-out;
 }
 
 .contact_form_container h1{
@@ -443,18 +452,39 @@ button{
 
 /* END MAIN */
 
+
+
 @media screen and (min-width: 768px) {
 
-    /* HEADER */
-    .content_text span{
-        font-size: 50px;
-        font-weight: 700;
+    /* NAV */
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2.2em;
     }
-    
-    .content_text p{
-        font-size: 30px;
+
+    .nav_hamburger_button{
+        display: none;
     }
-    /* END HEADER */
+
+    .nav_cont{
+        width: 50%;
+        justify-content: center;
+    }
+
+    .nav_cont_menu{
+        display: flex;
+        opacity: 1;
+        height: 100%;
+        justify-content: start;
+        width: 50%;
+    }
+
+    .nav_lista{
+        flex-direction: row;
+        padding: 0;
+    }
+    /* END NAV */
 
     /* DESCUBRE */
     .descubre{
@@ -489,6 +519,18 @@ button{
 }
 
 @media screen and (min-width: 1024px) {
+    
+    /* HEADER */
+    .content_text span{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    
+    .content_text p{
+        font-size: 30px;
+    }
+    /* END HEADER */
+
     .contact_content{
         gap: 2em;
     }
