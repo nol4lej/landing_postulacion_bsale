@@ -564,22 +564,25 @@ button{
 }
 
 .contact_form_container form{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     font-weight: 700;
 }
 
-.contact_form_container form input, textarea{
+.contact_form_container input, textarea{
     border-radius: 10px;
     padding: 1em;
     margin-bottom: 1.5em;
     background-color: var(--bg-color-terciario);
     border: none;
     resize: none;
+    width: 90%;
 }
 
 .form_buttons{
     display: flex;
     justify-content: center;
+    width: 90%;
 }
 
 .form_buttons button{
