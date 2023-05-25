@@ -105,7 +105,7 @@
                 <span class="material-icons">groups</span>
                 <h1>Emprende con Nosotros</h1>
                 <p>Conoce todos los beneficios que te entregan nuestras empresas asociadas</p>
-                <button>Leer más</button>
+                <a href="">Leer más</a>
             </div>
         </section>
         <section class="about">
@@ -128,16 +128,45 @@
             <div class="contact_tittle">
                 <h1>Contáctanos</h1>
             </div>
+
+            <div class="contact_items_container">
+                <div class="contact_item">
+                    <i class="material-icons">supervisor_account</i>
+                    <p>Atención personalizada por nuestro equipo de expertos.</p>
+                </div>
+                <div class="contact_item">
+                    <i class="material-icons">call</i>
+                    <p>Contacto telefónico +569 1234 5678.</p>
+                </div>
+                <div class="contact_item">
+                    <i class="material-icons">corporate_fare</i>
+                    <p>Visítanos en 2311 North Los Robles Avenue, Pasadena, California.</p>
+                </div>
+                <div class="contact_item">
+                    <i class="material-icons">email</i>
+                    <p>contacto@bsale.cl</p>
+                </div>
+            </div>
+
+
             <div class="contact_form_container">
+                <h1>Formulario de Contacto</h1>
                 <form action="" method="post">
                     <label for="">Nombre completo:</label>
-                    <input type="text">
+                    <input type="text" required>
 
                     <label for="">Email:</label>
-                    <input type="email" name="" id="">
+                    <input type="email" name="" id="" required>
+
+                    <label for="">Teléfono:</label>
+                    <input type="tel" name="" id="" required>
 
                     <label for="">Cuéntanos cómo podemos ayudarte:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" required></textarea>
+
+                    <div class="form_buttons">
+                        <button type="submit">Enviar Formulario</button>
+                    </div>
                 </form>
             </div>
         </section>
