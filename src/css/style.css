@@ -339,7 +339,9 @@ button{
 /* CONTACT */
 
 .contact{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 3em;
     margin: 2em;
     padding: 2em;
@@ -351,10 +353,16 @@ button{
     text-align: center;
 }
 
+.contact_content{
+    display: flex;
+    flex-direction: column;
+}
+
 .contact_items_container{
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    padding: 1em;
 }
 
 .contact_item{
@@ -418,14 +426,32 @@ button{
         margin: 0;
     }
 
-    .contact{
-        /* justify-content: center; */
+    .contact_content{
+        border: 1px solid red;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
+
+    .contact_items_container{
+        order: 2;
+    }
+
+    .contact_form_container{
+        border: 1px solid red;
+        order: 1;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
     
-    .contact{
-        margin: 2em 10em;
+    .contact_content{
+        gap: 10em;
     }
+
+    .contact_form_container{
+        width: 50%;
+    }
+
 }
