@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-  }
+}
 
-a {
+:root{
+    --color-primario: #795400;
+    --color-secundario: #ca8e00;
+    --bg-color-primario: rgb(28, 28, 28);
+    --bg-color-secundario: rgb(97, 97, 97);
+    --bg-color-terciario: rgb(141, 141, 141);
+}
+
+a{
     text-decoration: none; /* Elimina la decoración subrayada */
     color: inherit; /* Hereda el color del texto del elemento padre */
 }
@@ -19,8 +27,8 @@ button{
 
 /* NAV */
 .nav{
-    color: azure;
-    background-color: rgb(28, 28, 28);
+    color: #fff;
+    background-color: var(--bg-color-primario);
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -85,7 +93,7 @@ button{
     transition: opacity 1s ease-in-out;
 }
 
-/* capa sobre slide que da efecto de oscurecer */
+/* capa sobre el slide que da efecto de oscurecer */
 .slide::after {
     content: "";
     position: absolute;
@@ -132,18 +140,26 @@ button{
     font-size: 20px;
 }
 
-.slider_content a{
-    border: 2px solid white;
-    border-radius: 10px;
-    width: max-content;
-    padding: 0.5em;
-    font-weight: 500;
-    transition: all 0.5s ease-in-out;
+.button_container{
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    bottom: 44%;
+    transform: translate(-50%, -50%);
 }
 
-.slider_content a:hover{
-    background-color: rgb(28, 28, 28);
-    border: 2px solid rgb(141, 141, 141);
+.button_container button{
+    padding: 0.5em;
+    background: none;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.button_container button:hover{
+    background-color: var(--color-primario);
 }
 
 .options_container{
@@ -163,7 +179,7 @@ button{
 }
 
 .options_container button > span {
-    background-color: rgb(28, 28, 28);
+    background-color: var(--bg-color-primario);
     border-radius: 50px;
     font-size: 70px;
     padding: 10px;
@@ -171,9 +187,8 @@ button{
 }
 
 .options_container button > span:hover{
-    background-color: rgb(102, 102, 102);
+    background-color: var(--color-primario);
 }
-
 
 .slick_slider_container{
     position: absolute;
@@ -186,7 +201,7 @@ button{
 }
 
 .slick_rounded{
-    background-color: rgb(97, 97, 97);
+    background-color: var(--bg-color-secundario);
     width: 15px;
     height: 15px;
     padding: 1px;
@@ -209,7 +224,7 @@ button{
 .descubre_card{
     margin: 1.5em;
     color: #fff;
-    background-color: black;
+    background-color: var(--bg-color-primario);
 }
 
 .card_img_container{
@@ -237,13 +252,13 @@ button{
 
 .card_content a{
     width: max-content;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
     transition: all 0.3s ease-in-out;
 }
 
 .card_content a:hover{
-    color: #757575;
-    border-bottom: 1px solid #757575;
+    color: var(--color-primario);
+    border-bottom: 1px solid var(--color-primario);
 }
 
 /* END DESCUBRE */
@@ -251,6 +266,7 @@ button{
 .emprende{
     background-image: url("../img/about4-1.png");
     background-size: cover;
+    background-position: center;
     padding: 2em;
     color: #fff;
     text-align: center;
@@ -264,11 +280,15 @@ button{
 }
 
 .emprende_content span{
+    border: 1px solid var(--color-secundario);
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    padding: 0.3em;
     font-size: 60px;
 }
 
 .emprende a{
-    border: 2px solid white;
+    border: 2px solid #fff;
     border-radius: 10px;
     width: max-content;
     padding: 0.5em;
@@ -277,8 +297,7 @@ button{
 }
 
 .emprende a:hover{
-    background-color: rgb(28, 28, 28);
-    border: 2px solid rgb(141, 141, 141);
+    background-color: var(--color-primario);
 }
 /* EMPRENDE */
 /* ABOUT */
@@ -291,7 +310,7 @@ button{
 .about_content{
     padding: 2em;
     color: #fff;
-    background-color: black;
+    background-color: var(--bg-color-primario);
 }
 
 .about_card{
@@ -309,7 +328,7 @@ button{
 
 .about_card_icon span{
     padding: 0.5em;
-    background-color: rgb(141, 141, 141);
+    background-color: var(--bg-color-terciario);
     border-radius: 50%;
     font-size: 70px;
 }
@@ -321,7 +340,7 @@ button{
 }
 
 .about_card_content a{
-    border: 2px solid white;
+    border: 2px solid #fff;
     border-radius: 10px;
     width: max-content;
     padding: 0.5em;
@@ -330,8 +349,7 @@ button{
 }
 
 .about_card_content a:hover{
-    background-color: rgb(28, 28, 28);
-    border: 2px solid rgb(141, 141, 141);
+    background-color: var(--color-primario);
 }
 
 
@@ -372,7 +390,7 @@ button{
 }
 
 .contact_item i{
-    background-color: #757575;
+    background-color: var(--bg-color-terciario);
     padding: 0.4em;
     font-size: 40px;
     border-radius: 50%;
@@ -391,7 +409,7 @@ button{
     border-radius: 10px;
     padding: 1em;
     margin-bottom: 1.5em;
-    background-color: #cdcdcd;
+    background-color: var(--bg-color-terciario);
     border: none;
     resize: none;
 }
@@ -407,12 +425,38 @@ button{
     border-radius: 10px;
 }
 
+.form_buttons button{
+    background-color: var(--color-primario);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    width: max-content;
+    padding: 1em;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+
+.form_buttons button:hover{
+    background-color: var(--color-secundario);
+}
 
 /* END CONTACT */
 
 /* END MAIN */
 
 @media screen and (min-width: 768px) {
+
+    /* HEADER */
+    .content_text span{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    
+    .content_text p{
+        font-size: 30px;
+    }
+    /* END HEADER */
+
+    /* DESCUBRE */
     .descubre{
         display: flex;
         justify-content: center;
@@ -425,9 +469,10 @@ button{
     .descubre_card{
         margin: 0;
     }
+    /* END DESCUBRE */
 
+    /* CONTACT */
     .contact_content{
-        border: 1px solid red;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -438,20 +483,24 @@ button{
     }
 
     .contact_form_container{
-        border: 1px solid red;
         order: 1;
     }
-
+    /* END CONTACT */
 }
 
 @media screen and (min-width: 1024px) {
-    
     .contact_content{
-        gap: 10em;
+        gap: 2em;
     }
 
     .contact_form_container{
         width: 50%;
     }
+}
 
+@media screen and (min-width: 1200px) {
+    .contact{
+        margin-left: 10em;
+        margin-right: 10em;
+    }
 }
