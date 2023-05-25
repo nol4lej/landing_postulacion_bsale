@@ -77,6 +77,14 @@ button{
     padding-top: 5.5em;
 }
 
+.arrow_back_container{
+    display: none;
+}
+
+.arrow_forward_container{
+    display: none;
+}
+
 .slider{
     position: relative;
     overflow: hidden;
@@ -124,7 +132,7 @@ button{
     align-items: center;
     gap: 2em;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 6;
@@ -485,6 +493,51 @@ button{
         padding: 0;
     }
     /* END NAV */
+
+    /* HEADER */
+    .slick_slider_container{
+        display: none;
+    }
+
+    .arrow_back_container{
+        display: block;
+        position: absolute;
+        z-index: 6;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+    }
+
+    .arrow_back_container button{
+        background: none;
+    }
+
+    .arrow_back_container i{
+        color: #fff;
+        font-size: 70px;
+        filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+    }
+
+    .arrow_forward_container{
+        display: block;
+        position: absolute;
+        z-index: 6;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+    }
+
+    .arrow_forward_container button{
+        background: none;
+    }
+
+    .arrow_forward_container i{
+        color: #fff;
+        font-size: 70px;
+        filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+    }
+
+    /* END HEADER */
 
     /* DESCUBRE */
     .descubre{
