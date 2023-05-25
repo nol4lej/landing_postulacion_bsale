@@ -576,7 +576,7 @@ button{
     background-color: var(--bg-color-terciario);
     border: none;
     resize: none;
-    width: 90%;
+    width: 100%;
 }
 
 .form_buttons{
