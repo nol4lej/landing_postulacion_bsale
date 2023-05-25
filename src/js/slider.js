@@ -1,3 +1,8 @@
+let slides_about = document.querySelectorAll(".about_card");
+let currentAbout = 0;
+let arrow_back_about = document.getElementById("arrow_back_about");
+let arrow_forward_about = document.getElementById("arrow_forward_about");
+
 let slicks_rounded = document.querySelectorAll(".slick_rounded");
 let slides = document.querySelectorAll(".slide");
 let arrow_back = document.getElementById("arrow_back");
@@ -38,7 +43,6 @@ arrow_back.addEventListener("click", () => {
     slides[currentSlide].classList.add("active")
   }
   reinicioIntervalo()
-  console.log(currentSlide)
 })
 
 arrow_forward.addEventListener("click", () => {
@@ -51,7 +55,6 @@ arrow_forward.addEventListener("click", () => {
     slides[currentSlide].classList.add("active")
   }
   reinicioIntervalo()
-  console.log(currentSlide)
 })
 
 function reinicioIntervalo(){
@@ -59,3 +62,26 @@ function reinicioIntervalo(){
   clearInterval(slideInterval); 
   slideInterval = setInterval(nextSlide, 5000);
 }
+
+arrow_forward_about.addEventListener("click", () => {
+  slides_about[currentAbout].classList.remove("active")
+  if(currentAbout === 1){
+    currentAbout = 0;
+    slides_about[currentAbout].classList.add("active", )
+  } else {
+    currentAbout = currentAbout + 1;
+    slides_about[currentAbout].classList.add("active")
+  }
+})
+
+arrow_back_about.addEventListener("click", () => {
+  slides_about[currentAbout].classList.remove("active")
+  if(currentAbout === 0){
+    currentAbout = 1;
+    slides_about[currentAbout].classList.add("active")
+  } else {
+    currentAbout = currentAbout - 1;
+    slides_about[currentAbout].classList.add("active")
+  }
+  reinicioIntervalo()
+})

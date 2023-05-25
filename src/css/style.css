@@ -311,6 +311,7 @@ button{
 .emprende a:hover{
     background-color: var(--color-primario);
 }
+
 /* EMPRENDE */
 /* ABOUT */
 .about_tittle{
@@ -328,14 +329,22 @@ button{
 .about_card{
     text-align: center;
     position: relative;
-    z-index: 6;
+    z-index: 10;
     margin-top: -6em;
-    display: grid;
+    margin-left: 7em;
+    margin-right: 7em;
+    display: none;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 
+.about_card.active{
+    display: flex;
+}
+
 .about_card_icon{
-    text-align: center;
+    width: max-content;
 }
 
 .about_card_icon span{
@@ -343,6 +352,7 @@ button{
     background-color: var(--bg-color-terciario);
     border-radius: 50%;
     font-size: 70px;
+    
 }
 
 .about_card_content{
@@ -363,6 +373,59 @@ button{
 .about_card_content a:hover{
     background-color: var(--color-primario);
 }
+
+.arrow_back_about{
+    display: block;
+    position: absolute;
+    z-index: 6;
+    left: 7%;
+}
+
+.arrow_back_about button{
+    background: none;
+}
+
+.arrow_back_about i{
+    color: #fff;
+    font-size: 50px;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+    transition: color 0.3s ease-in-out;
+}
+
+.arrow_back_about:hover i{
+    color: var(--color-primario);
+}
+
+/* .arrow_back_about.active{
+    transform: translateX(-100%);
+} */
+
+.arrow_forward_about{
+    display: block;
+    position: absolute;
+    z-index: 6;
+    right: 7%;
+}
+
+.arrow_forward_about button{
+    background: none;
+}
+
+.arrow_forward_about i{
+    color: #fff;
+    font-size: 50px;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+    transition: color 0.3s ease-in-out;
+}
+
+.arrow_forward_about:hover i{
+    color: var(--color-primario);
+}
+
+/* .arrow_forward_about.active{
+    transform: translateX(100%);
+} */
+
 
 
 /* ABOUT */
@@ -455,12 +518,8 @@ button{
 .form_buttons button:hover{
     background-color: var(--color-secundario);
 }
-
 /* END CONTACT */
-
 /* END MAIN */
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -516,6 +575,11 @@ button{
         color: #fff;
         font-size: 70px;
         filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+        transition: color 0.3s ease-in-out;
+    }
+
+    .arrow_back_container:hover i{
+        color: var(--color-primario);
     }
 
     .arrow_forward_container{
@@ -535,8 +599,12 @@ button{
         color: #fff;
         font-size: 70px;
         filter: drop-shadow(0 25px 25px rgb(0 0 0 / 1));
+        transition: color 0.3s ease-in-out;
     }
 
+    .arrow_forward_container:hover i{
+        color: var(--color-primario);
+    }
     /* END HEADER */
 
     /* DESCUBRE */
@@ -553,6 +621,24 @@ button{
         margin: 0;
     }
     /* END DESCUBRE */
+
+    /* ABOUT */
+    .about_content{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .about_card{
+        display: flex;
+        /* width: 200px; */
+        border: 1px solid red;
+    }
+
+    .arrow_back_about, .arrow_forward_about{
+        display: none;
+    }
+
+    /* END ABOUT */
 
     /* CONTACT */
     .contact_content{
