@@ -11,6 +11,12 @@ html {
     scroll-behavior: smooth;
   }
 
+body.loading {
+
+  overflow: hidden;
+
+}
+
 :root{
     --color-primario: #795400;
     --color-secundario: #ca8e00;
