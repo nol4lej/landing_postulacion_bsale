@@ -9,12 +9,11 @@
 
 html {
     scroll-behavior: smooth;
-  }
+    
+}
 
-body.loading {
-
-  overflow: hidden;
-
+.page_content{
+    display: none;
 }
 
 :root{
@@ -439,14 +438,17 @@ button{
 }
 
 .about_card_content{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
     gap: 10px;
-    justify-items: center;
 }
 
 .about_card_content p{
-    max-height: 100%;
     overflow: auto;
+    /* max-height: 100%; */
+    height: 100px;
 }
 
 .about_card_content a{
@@ -564,6 +566,10 @@ button{
     transition: background 0.3s ease-in-out;
 }
 
+.contact_form_container{
+    width: 90%;
+}
+
 .contact_form_container h1{
     text-align: center;
     padding: 1em;
@@ -573,6 +579,7 @@ button{
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    flex-grow: 1;
 }
 
 .contact_form_container input, textarea{
@@ -659,37 +666,6 @@ button{
 
 @media screen and (min-width: 768px) {
 
-    /* NAV */
-    .nav{
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 2.2em;
-    }
-
-    .nav_hamburger_button{
-        display: none;
-    }
-
-    .nav_cont{
-        width: 50%;
-        justify-content: center;
-    }
-
-    .nav_cont_menu{
-        flex-direction: row;
-        align-items: center;
-        opacity: 1;
-        height: 100%;
-        justify-content: start;
-        width: 50%;
-    }
-
-    .nav_lista{
-        flex-direction: row;
-        padding: 0;
-    }
-    /* END NAV */
-
     /* HEADER */
     .slick_slider_container{
         display: none;
@@ -770,8 +746,10 @@ button{
 
     .about_card{
         display: flex;
-        margin-left: 7em;
-        margin-right: 7em;
+        /* margin-left: 7em;
+        margin-right: 7em; */
+        flex: 1;
+        flex-basis: 33.33%;
     }
 
     .arrow_back_about, .arrow_forward_about{
@@ -808,6 +786,37 @@ button{
 }
 
 @media screen and (min-width: 1024px) {
+
+    /* NAV */
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2.2em;
+    }
+
+    .nav_hamburger_button{
+        display: none;
+    }
+
+    .nav_cont{
+        width: 50%;
+        justify-content: center;
+    }
+
+    .nav_cont_menu{
+        flex-direction: row;
+        align-items: center;
+        opacity: 1;
+        height: 100%;
+        justify-content: start;
+        width: 50%;
+    }
+
+    .nav_lista{
+        flex-direction: row;
+        padding: 0;
+    }
+    /* END NAV */
     
     /* HEADER */
     .content_text span{
