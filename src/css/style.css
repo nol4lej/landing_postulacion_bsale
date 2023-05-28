@@ -845,6 +845,11 @@ button{
     }
 }
 
+@media screen and (max-height: 650px) {
+    .slider{
+        height: 150vh;
+    }
+}
 
 /* LOADING */
 .loading {
