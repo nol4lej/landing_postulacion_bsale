@@ -125,7 +125,7 @@ button{
     align-items: center;
 }
 
-.login_container:hover button{
+.login_container button:hover{
     background-color: var(--color-secundario);
 }
 /* END NAV */
