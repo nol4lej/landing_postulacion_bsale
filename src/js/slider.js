@@ -8,6 +8,7 @@ let slides = document.querySelectorAll(".slide");
 let arrow_back = document.getElementById("arrow_back");
 let arrow_forward = document.getElementById("arrow_forward");
 let currentSlide = 0;
+
 let slideInterval = setInterval(nextSlide, 5000);
 
 function nextSlide() {

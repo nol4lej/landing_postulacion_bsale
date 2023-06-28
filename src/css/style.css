@@ -110,6 +110,7 @@ button{
 .login_container{
     display: flex;
     gap: 1em;
+    width: max-content;
 }
 
 .login_container button{
@@ -123,6 +124,8 @@ button{
     display: flex;
     gap: 0.5em;
     align-items: center;
+    white-space: nowrap;
+
 }
 
 .login_container button:hover{
