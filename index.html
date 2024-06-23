@@ -6,37 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="./src/styles/index.css">
+
     <title>GrowthConnect - Comunidad de Emprendedores</title>
 </head>
 <body>
 
-    <div class="loading">
+    <script type="module" src="./main.js"></script>
+
+    <!-- <div class="loading">
 		<div class="loader"></div>
         <h1>GrowthConnect</h1>
-	</div>
+	</div> -->
+
+    
 
     <div class="page_content" id="page_content">
-        <nav class="nav">
-            <div class="nav_cont">
-                <div class="nav_cont_logo">
-                    <h1>GrowthConnect</h1>
-                </div>
-                <div class="nav_hamburger_button" id="nav_hamburger_button">
-                    <svg fill="#fff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M280.214,39.211H16.786C7.531,39.211,0,46.742,0,55.997v24.335c0,9.256,7.531,16.787,16.786,16.787h263.428 c9.255,0,16.786-7.531,16.786-16.787V55.997C297,46.742,289.469,39.211,280.214,39.211z"></path> <path d="M280.214,119.546H16.786C7.531,119.546,0,127.077,0,136.332v24.336c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.336C297,127.077,289.469,119.546,280.214,119.546z"></path> <path d="M280.214,199.881H16.786C7.531,199.881,0,207.411,0,216.668v24.335c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.335C297,207.411,289.469,199.881,280.214,199.881z"></path> </g> </g> </g> </g></svg>
-                </div>
-            </div>
-            <div class="nav_cont_menu" id="nav_cont_menu">
-                <ul class="nav_lista">
-                    <li class="nav_lista_item"><a href="#header">Inicio</a></li>
-                    <li class="nav_lista_item"><a href="#emprende">Nosotros</a></li>
-                    <li class="nav_lista_item"><a href="#contact">Contacto</a></li>
-                </ul>
-                <div class="login_container">
-                    <button><i class="material-icons">login</i> Iniciar sesión</button>
-                    <button><i class="material-icons">person_add</i>Registrar</button>
-                </div>
-            </div>
-        </nav>
+
+        <nav-bar></nav-bar>
+
         <header class="header" id="header">
             <div class="arrow_back_container">
                 <button id="arrow_back"><i class="material-icons">arrow_back_ios</i></button>
@@ -234,14 +223,13 @@
 </body>
 
 <script>
-const page = document.getElementById("page_content")
-window.addEventListener("load", function() {
-    document.body.classList.add("loaded", "fade-in");
-    page.style.display = "block";
-});
+    const page = document.getElementById("page_content")
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded", "fade-in");
+        page.style.display = "block";
+    });
 </script>
 
-<script src="./src/js/nav.js"></script>
-<script src="./src/js/slider.js"></script>
+<!-- <script src="./src/js/slider.js"></script> -->
 
 </html>
