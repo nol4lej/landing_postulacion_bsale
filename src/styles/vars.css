@@ -1,0 +1,7 @@
+:root{
+    --color-primario: #795400;
+    --color-secundario: #ca8e00;
+    --bg-color-primario: rgb(28, 28, 28);
+    --bg-color-secundario: rgb(97, 97, 97);
+    --bg-color-terciario: rgb(141, 141, 141);
+}
